@@ -1,5 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.appb64ec64666e9432a9caf5f01009feb88" version="1.0.0.0" xmlns="http://www.w3.org/ns/widgets">
-  <name>Ionic App</name>
-  <vs:platformSpecificValues />
+﻿<widget xmlns:cdv="http://cordova.apache.org/ns/1.0"
+  id="io.cordova.appb64ec64666e9432a9caf5f01009feb88"
+  version="1.0.0.0"
+  xmlns:gap="http://phonegap.com/ns/1.0"
+  xmlns="http://www.w3.org/ns/widgets">
+<name>Ionic App</name>
+<icon src="icon.png" />
+<gap:splash src="splash.png" /> 
+<gap:plugin name="org.apache.cordova.device-motion" version="0.2.10" />
+<gap:plugin name="org.apache.cordova.camera" version="0.3.2" /> 
 </widget>
