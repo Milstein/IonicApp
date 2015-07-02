@@ -1,0 +1,26 @@
+﻿<ion-view title="Create">
+    <ion-content padding="true" scroll="false" class="has-header">
+        <form>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Name</span>
+                    <input type="text" placeholder="" ng-model="customer.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="text" placeholder="" ng-model="customer.email">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Contact No</span>
+                    <input type="text" placeholder="" ng-model="customer.contactno">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Address</span>
+                    <textarea rows="3" cols="5" type="text" placeholder="" ng-model="customer.address"></textarea>
+                </label>
+            </ion-list>
+            <button class="button button-positive button-block" ng-click="add(customer)">Create</button>
+            <button class="button button-stable button-block" ng-click="cancel(customer)">Cancel</button>
+        </form>
+    </ion-content>
+</ion-view>
