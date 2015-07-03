@@ -1,30 +1,36 @@
-﻿<ion-view title="Signup">
-    <ion-content padding="true" scroll="false" class="has-header">
-        <form>
-            <ion-list>
-                <label class="item item-input">
-                    <span class="input-label">Name</span>
-                    <input type="text" placeholder="" ng-model="user.name">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">Username</span>
-                    <input type="text" placeholder="" ng-model="user.email">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">Password</span>
-                    <input type="password" placeholder="" ng-model="user.password">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">Contact No</span>
-                    <input type="text" placeholder="" ng-model="user.contactno">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">Address</span>
-                    <textarea rows="3" cols="5" type="text" placeholder="" ng-model="user.address"></textarea>
-                </label>
-            </ion-list>
-            <button class="button button-positive button-block" ng-click="signUp(user)">Sign up</button>
-            <button class="button button-stable button-block" ng-click="cancel()">Cancel</button>
+﻿<ion-view view-title="User Sign Up">
+    <ion-content padding="true">
+        <form role="form" name="userform" novalidate="novalidate">
+            <label class="item item-input item-stacked-label">
+                <!--<span class="input-label">Name</span>-->
+                <input type="text" data-ng-model="user.Name" name="Name" placeholder="Name" required="required" ng-class="{ 'field-error' : userform.Name.$invalid && (userform.Name.$dirty || submitted), 'field-success':userform.Name.$valid}" />
+                <p ng-show="userform.Name.$error.required && (userform.Name.$dirty || submitted)" class="form-error">Please Enter Name</p>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <!--<span class="input-label">Name</span>-->
+                <input type="text" data-ng-model="user.Email" name="Email" placeholder="Email" required="required" ng-class="{ 'field-error' : userform.Email.$invalid && (userform.Email.$dirty || submitted), 'field-success':userform.Email.$valid}" />
+                <p ng-show="userform.Email.$error.required && (userform.Email.$dirty || submitted)" class="form-error">Please Enter Email</p>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <!--<span class="input-label">Name</span>-->
+                <input type="password" data-ng-model="user.Password" name="Password" placeholder="Password" required="required" ng-class="{ 'field-error' : userform.Password.$invalid && (userform.Password.$dirty || submitted), 'field-success':userform.Password.$valid}" />
+                <p ng-show="userform.Password.$error.required && (userform.Password.$dirty || submitted)" class="form-error">Please Enter Password</p>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <!--<span class="input-label">Contact No</span>-->
+                <input type="text" data-ng-model="user.ContactNo" name="ContactNo" placeholder="Your Contact No" required="required" ng-class="{ 'field-error' : userform.ContactNo.$invalid && (userform.Address.$dirty || submitted), 'field-success':userform.ContactNo.$valid}" />
+                <p ng-show="userform.ContactNo.$error.required && (userform.ContactNo.$dirty || submitted)" class="form-error">Please Enter Contact No</p>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <!--<span class="input-label">Address</span>-->
+                <textarea rows="3" cols="5" data-ng-model="user.Address" name="Address" placeholder="Your Address" required="required" ng-class="{ 'field-error' : userform.Address.$invalid && (userform.Address.$dirty || submitted), 'field-success':userform.Address.$valid}"></textarea>
+                <p ng-show="userform.Address.$error.required && (userform.Address.$dirty || submitted)" class="form-error">Please Enter Address</p>
+            </label>
+            <div class="item">
+                <span>
+                    <input type="submit" class="button  button-positive button-block" value="Create Account" data-ng-click="SignUp(user)" />
+                </span>
+            </div>
         </form>
     </ion-content>
 </ion-view>

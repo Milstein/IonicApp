@@ -1,0 +1,22 @@
+﻿<ion-view view-title="Customers">
+    <ion-nav-page title="title">
+        <ion-content padding="true">
+            <div>
+                <p>
+                    <a href="#/tab/addcustomer" class="button button-small ion-person-add" data-ng-click="addCustomer()"> Create New</a>
+                </p>
+            </div>
+            <ion-list can-swipe="listCanSwipe">
+                <ion-item ng-repeat="customer in customers" class="item-remove-animate" href="#/tab/viewcustomer/{{customer.CustomerId}}">
+                    <p>{{ customer.Name }} {{customer.Email}}</p>
+                    <p>{{ customer.Address }} {{ customer.ContactNo }}</p>
+                    <ion-option-button class="button button-icon icon ion-edit" ng-click="edit(customer.CustomerId)">
+                    </ion-option-button>
+                    <ion-option-button class="button button-icon icon ion-eye" ng-click="view(customer.CustomerId)">
+                    </ion-option-button>
+                    <ion-option-button class="button button-icon icon ion-ios-minus" ng-click="showConfirm(customer)">
+                    </ion-option-button>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+</ion-view>

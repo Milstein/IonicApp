@@ -1,0 +1,39 @@
+﻿<ion-view view-title="{{editMode === true ? 'Edit Customer' : 'Add Customer'}}">
+    <ion-content padding="true">
+        <form role="form" name="customerform" novalidate="novalidate">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Name</span>
+                <input type="text" data-ng-model="customer.Name" name="Name" placeholder="Name" required="required" ng-class="{ 'field-error' : customerform.Name.$invalid && (customerform.Name.$dirty || submitted), 'field-success':customerform.Name.$valid}" />
+                <p ng-show="customerform.Name.$error.required && (customerform.Name.$dirty || submitted)" class="form-error">Please Enter Name</p>
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Email</span>
+                <input type="text" data-ng-model="customer.Email" name="Email" placeholder="Your Email" required="required" ng-class="{ 'field-error' : customerform.Email.$invalid && (customerform.Email.$dirty || submitted), 'field-success':customerform.Email.$valid}" />
+                <p ng-show="customerform.Email.$error.required && (customerform.Email.$dirty || submitted)" class="form-error">Please Enter Email</p>
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Contact No</span>
+                <input type="text" data-ng-model="customer.ContactNo" name="ContactNo" placeholder="Your Contact No" required="required" ng-class="{ 'field-error' : customerform.ContactNo.$invalid && (customerform.ContactNo.$dirty || submitted), 'field-success':customerform.ContactNo.$valid}" />
+                <p ng-show="customerform.ContactNo.$error.required && (customerform.ContactNo.$dirty || submitted)" class="form-error">Please Enter Contact No</p>
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Address</span>
+                <textarea rows="3" cols="5" data-ng-model="customer.Address" name="Address" placeholder="Your Address" required="required" ng-class="{ 'field-error' : customerform.Address.$invalid && (customerform.Address.$dirty || submitted), 'field-success':customerform.Address.$valid}"></textarea>
+                <p ng-show="customerform.Address.$error.required && (customerform.Address.$dirty || submitted)" class="form-error">Please Enter Address</p>
+            </label>
+
+            <div class="item">
+                <span data-ng-hide="editMode">
+                    <input type="submit" class="button  button-positive button-block" value="Save" data-ng-click="add(customer)" />
+                </span>
+                <span data-ng-show="editMode">
+                    <input type="submit" class="button  button-positive button-block" value="Update" ng-disabled="customerform.$invalid" data-ng-click="update(customer)" />
+                </span>
+                <input type="button" class="button button-block" value="Cancel" data-ng-click="cancel()" />
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

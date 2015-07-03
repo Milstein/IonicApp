@@ -1,12 +1,14 @@
-﻿<ion-view title="Tabs">
-    <ion-tabs class="tabs-stable tabs-icon-top">
-        <ion-tab title="Home" icon="ion-home" href="#/dashboard/home">
-            <ion-nav-view name="dashboard"></ion-nav-view>
+﻿<ion-view>
+    <ion-tabs class="tabs-icon-top tabs-positive">
+        <ion-tab title="Dashboard" icon="ion-grid" href="#/tab/dashboard">
+            <ion-nav-view name="dashboard-tab"></ion-nav-view>
         </ion-tab>
-        <ion-tab title="Add" icon="ion-person-add" href="#/dashboard/create">
-            <ion-nav-view name="create"></ion-nav-view>
+
+        <ion-tab title="Customers" icon="ion-person-stalker" href="#/tab/customers">
+            <ion-nav-view name="customers-tab"></ion-nav-view>
         </ion-tab>
-        <ion-tab title="Sign Out" icon="ion-power" href="#/signin">
+
+        <ion-tab title="Sign-Out" icon="ion-power" href="#/sign-in">
         </ion-tab>
     </ion-tabs>
 </ion-view>

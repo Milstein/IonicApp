@@ -1,10 +1,10 @@
-﻿<widget xmlns:cdv="http://cordova.apache.org/ns/1.0"
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0"
   id="io.cordova.appb64ec64666e9432a9caf5f01009feb88"
   version="1.0.0.0"
   xmlns:gap="http://phonegap.com/ns/1.0"
   xmlns="http://www.w3.org/ns/widgets">
 <name>Ionic App</name>
-<description>Ionic Sample App</description>
+<description>A Simple Ionic App</description>
 <icon src="icon.png" />
 <gap:splash src="splash.png" /> 
 <gap:plugin name="org.apache.cordova.device-motion" version="0.2.10" />
